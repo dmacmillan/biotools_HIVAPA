@@ -103,9 +103,8 @@ def translateDNA(sequence, resolvecharacter="X", flag=2):
 		i += 3
 	return aaseq
 
-def parse(input):
-	val = input.translate(None, '\r')
-	val = [x.split('\t') for x in val.split('\n')]
+def parse(inputText):
+	val = [x.split('\t') for x in inputText.splitlines()]
 	return val
 
 def parseHLA(hla, res=4):

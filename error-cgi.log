@@ -36,3 +36,59 @@ Traceback (most recent call last):
   File "HIVAPA.py", line 245, in displayResults
     print '<td>{}</td>'.format(mediant[patient][0])
 NameError: global name 'mediant' is not defined
+Traceback (most recent call last):
+  File "HIVAPA.py", line 255, in <module>
+    displayResults(results)
+  File "HIVAPA.py", line 209, in displayResults
+    medians = computeMedian(results)
+  File "HIVAPA.py", line 204, in computeMedian
+    r[patient] = sorted(r[patient], key = lambda(x): (float(x[0])/x[1]))
+  File "HIVAPA.py", line 204, in <lambda>
+    r[patient] = sorted(r[patient], key = lambda(x): (float(x[0])/x[1]))
+ZeroDivisionError: float division by zero
+Traceback (most recent call last):
+  File "HIVAPA.py", line 251, in <module>
+    groupedHLAs = groupHLA(hlas)
+  File "HIVAPA.py", line 124, in groupHLA
+    loc = pair[1][:-1]
+IndexError: list index out of range
+Traceback (most recent call last):
+  File "HIVAPA.py", line 251, in <module>
+    groupedHLAs = groupHLA(hlas)
+  File "HIVAPA.py", line 124, in groupHLA
+    loc = pair[1][:-1]
+IndexError: list index out of range
+Traceback (most recent call last):
+  File "HIVAPA.py", line 251, in <module>
+    groupedHLAs = groupHLA(hlas)
+  File "HIVAPA.py", line 124, in groupHLA
+    loc = pair[1][:-1]
+IndexError: list index out of range
+Traceback (most recent call last):
+  File "HIVAPA.py", line 251, in <module>
+    groupedHLAs = groupHLA(hlas)
+  File "HIVAPA.py", line 124, in groupHLA
+    loc = pair[1][:-1]
+IndexError: list index out of range
+Traceback (most recent call last):
+  File "HIVAPA.py", line 252, in <module>
+    groupedHLAs = groupHLA(hlas)
+  File "HIVAPA.py", line 124, in groupHLA
+    loc = pair[1][:-1]
+IndexError: list index out of range
+Traceback (most recent call last):
+  File "HIVAPA.py", line 258, in <module>
+    displayResults(results)
+  File "HIVAPA.py", line 211, in displayResults
+    medians = computeMedian(results)
+  File "HIVAPA.py", line 206, in computeMedian
+    r[patient] = sorted(r[patient], key = lambda(x): (float(x[0])/x[1]))
+  File "HIVAPA.py", line 206, in <lambda>
+    r[patient] = sorted(r[patient], key = lambda(x): (float(x[0])/x[1]))
+ZeroDivisionError: float division by zero
+Traceback (most recent call last):
+  File "HIVAPA.py", line 249, in <module>
+    hlas = parse(hlas)
+  File "HIVAPA.py", line 107, in parse
+    val = [x.split('\t') for x in val.splitlines()]
+UnboundLocalError: local variable 'val' referenced before assignment
