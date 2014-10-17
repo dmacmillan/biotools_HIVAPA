@@ -1,0 +1,38 @@
+Traceback (most recent call last):
+  File "HIVAPA.py", line 218, in <module>
+    displayResults(results)
+  File "HIVAPA.py", line 206, in displayResults
+    print '{}: ({})<br>'.format(hla, (',').join([x for x in results[patient][1][hla]]))
+TypeError: sequence item 0: expected string, list found
+Traceback (most recent call last):
+  File "HIVAPA.py", line 240, in <module>
+    displayResults(results)
+  File "HIVAPA.py", line 208, in displayResults
+    median = computeMedian(results)
+  File "HIVAPA.py", line 201, in computeMedian
+    if (mut in results[patient2][1][hla]):
+KeyError: 'B3501'
+Traceback (most recent call last):
+  File "HIVAPA.py", line 248, in <module>
+    displayResults(results)
+  File "HIVAPA.py", line 236, in displayResults
+    median = (upper + lower) / 2
+TypeError: unsupported operand type(s) for /: 'list' and 'int'
+Traceback (most recent call last):
+  File "HIVAPA.py", line 249, in <module>
+    displayResults(results)
+  File "HIVAPA.py", line 237, in displayResults
+    median = (upper + lower) / 2
+TypeError: unsupported operand type(s) for /: 'list' and 'int'
+Traceback (most recent call last):
+  File "HIVAPA.py", line 248, in <module>
+    displayResults(results)
+  File "HIVAPA.py", line 237, in displayResults
+    median = (upper + lower) / 2
+TypeError: unsupported operand type(s) for /: 'list' and 'int'
+Traceback (most recent call last):
+  File "HIVAPA.py", line 255, in <module>
+    displayResults(results)
+  File "HIVAPA.py", line 245, in displayResults
+    print '<td>{}</td>'.format(mediant[patient][0])
+NameError: global name 'mediant' is not defined
