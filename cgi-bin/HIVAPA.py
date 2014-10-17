@@ -155,20 +155,20 @@ def getResults(patients, groupedHLAs):
     for patient in patients:
         potential, actual = 0, 0
         results[patient] = [{},{}]
-        N = len(patients)
+        #N = len(patients)
         for hla in groupedHLAs:
             patientHLAs = patients[patient][hla[0].upper()]
             if (hla[:len(hla)] in [x[:len(hla)] for x in patientHLAs]):
                 potential = len(groupedHLAs[hla])
                 results[patient][0][hla] = groupedHLAs[hla]
             elif any(x[:len(x)] == hla[:len(x)] for x in patientHLAs) or (len(patientHLAs) < 2):
-                N -= 1
+                #N -= 1
                 continue
             for mut in groupedHLAs[hla]:
                 try:
                     patientAA = patients[patient]['seq'][int(mut[0])-1]
                 except IndexError:
-                    N -= 1
+                    #N -= 1
                     continue
                 if (len(patientAA) > 1):
                     patientAA = patientAA[1:-1].split('/')
@@ -180,7 +180,7 @@ def getResults(patients, groupedHLAs):
                         results[patient][1][hla] = [mut]
                     else:
                         results[patient][1][hla].append(mut)
-        results[patient].append(N)
+        #results[patient].append(N)
     return results  
 
 def computeMedian(results):
@@ -226,7 +226,7 @@ def displayResults(results):
         for hla in results[patient][1]:
             print '{}: ({})<br>'.format(hla, (',').join([('').join(x) for x in results[patient][1][hla]]))
         print '</td>'
-        print '<td>{}</td>'.format(results[patient][-1])
+        print '<td>N (to be implemented)</td>'
         if (len(medians[patient]) % 2 != 0):
             median = medians[patient][len(medians[patient])/2]
         else:
